@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-shadow: border-box;
+    font-family: sans-serif;
+}
+
+
+
+.home-page-section {
+    position: relative;
+    background-color: #1E283A;
+    height: 100vh;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.overlay-effect {
+    background-color: #1E283A;
+    height: 100vh;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    box-shadow: 50px -50px 30px #1E283A;
+}
+
+.video-container video {
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -2;
+    object-fit: cover;
+}
+
+/* .home-page-content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} */
+
+.content-heading-container {
+    position: relative;
+    margin: 150px 0 0 0;
+    width:300px;
+    animation: slide 1s ease-in;
+    opacity: 0;
+    /* transform: translateX(-100px); */
+    animation-fill-mode: forwards;
+    margin-inline: auto;
+}
+
+@keyframes slide {
+    0% {
+        /* transform: translateY(200px); */
+        transform: scale(0);
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.heading {
+    font-size: 30px;
+    color: white;
+}
+
+.heading-span {
+    color: #a2e635;
+}
+
+.heading-logo-amazon {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: -30px;
+    left: 240px;
+}
+
+.heading-logo-uber {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: -30px;
+    left: 190px;
+}
+
+.heading-logo-msytech {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: -35px;
+    left: 140px;
+}
+
+.heading-logo-micreosoft {
+    height: 110px;
+    width: 110px;
+    position: absolute;
+    top: -35px;
+    left: 240px;
+}
+
+.heading-logo-slice {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: -35px;
+    left: 140px;
+}
+
+.heading-logo-superk {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: -30px;
+    left: 140px;
+}
+
+/* top logo */
+
+.nav-container {
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+}
+
+
+
+.by-nxtwave-text {
+    text-decoration: none;
+    position: absolute;
+    left: 150px;
+    color: white;
+}
+
+.home-page-btn-container {
+    margin-top: 40px;
+    cursor: pointer;
+
+}
+
+.home-page-btn-container button {
+    width: 90%;
+    max-width: 400px;
+    display: block;
+    margin:10px;
+    height:40px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 12px;
+    margin-inline: auto;
+}
+
+.home-page-btn-container .home-page-btn {
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+
+}
+
+.home-page-discount h1 {
+    color:#F1F5F9;
+    font-size:20px;
+    text-align: center;
+    font-weight: 200;
+}
+
+.home-page-discount .dis-span {
+    color:#a2e635;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.home-page-dis-span {
+    text-decoration: line-through;
+}
+
+
+@media screen and (min-width:576px) and (max-width:767px) {
+    .content-heading-container {
+        margin-left: 20px;
+        width: 600px;
+        margin-top: 30px;
+    }
+    .heading  {
+        font-size: 46px;
+        
+    }
+    
+    .heading-logo-amazon {
+        height: 150px;
+        width: 150px;
+        position: absolute;
+        top: -40px;
+        left: 360px;
+    }
+
+    .heading-logo-uber {
+        height: 150px;
+        width: 150px;
+        position: absolute;
+        top: -45px;
+        left: 280px;
+    }
+
+    .heading-logo-msytech {
+        height: 150px;
+        width: 150px;
+        position: absolute;
+        top: -50px;
+        left: 200px;
+    }
+
+    .heading-logo-micreosoft {
+        height: 160px;
+        width: 160px;
+        position: absolute;
+        top: -50px;
+        left: 350px;
+    }
+
+    .heading-logo-slice {
+        height: 150px;
+        width: 150px;
+        position: absolute;
+        top: -50px;
+        left: 200px;
+    }
+
+    .heading-logo-superk {
+        height: 150px;
+        width: 150px;
+        position: absolute;
+        top: -40px;
+        left: 220px;
+    }
+
+    .overlay-effect {  
+        width: 200px;
+    }
+
+    .home-page-btn-container {
+        height: 44px;
+        width: 400px;
+        font-size:  14px;
+    }
+
+
+    .home-page-btn-container button {
+        margin-left: 20px;
+    }
+    .home-page-discount h1 {
+        margin-left: 20px;
+        text-align: left;
+        margin-top: 50px;
+    }
+
+    .nav-container {
+        padding-top: 100px;
+    }
+    
+    .by-nxtwave-text {
+        text-decoration: none;
+        color: white;
+        position: relative;
+        bottom: 26px;
+        right: 2px;
+
+    
+    }
+    .nav-container img {
+        height:100px;
+        width:250px;
+    }
+
+}
+
+
+@media screen and (min-width:768px) {
+    .content-heading-container {
+        margin-left: 60px;
+        width: 600px;
+        margin-top: 30px;
+    }
+    .heading  {
+        font-size: 60px;
+        
+    }
+    
+    .heading-logo-amazon {
+        height: 190px;
+        width: 190px;
+        position: absolute;
+        top: -50px;
+        left: 470px;
+    }
+
+    .heading-logo-uber {
+        height: 190px;
+        width: 190px;
+        position: absolute;
+        top: -60px;
+        left: 350px;
+    }
+
+    .heading-logo-msytech {
+        height: 190px;
+        width: 190px;
+        position: absolute;
+        top: -60px;
+        left: 270px;
+    }
+
+    .heading-logo-micreosoft {
+        height: 220px;
+        width: 220px;
+        position: absolute;
+        top: -75px;
+        left: 450px;
+    }
+
+    .heading-logo-slice {
+        height: 180px;
+        width: 180px;
+        position: absolute;
+        top: -60px;
+        left: 260px;
+    }
+
+    .heading-logo-superk {
+        height: 210px;
+        width: 210px;
+        position: absolute;
+        top: -65px;
+        left: 270px;
+    }
+
+    .overlay-effect {  
+        width: 350px;
+        height: 120%;
+    }
+    
+    .home-page-btn {
+        margin-top: 50px;
+    }
+
+    .home-page-btn-container button {
+        margin-left: 60px;
+        height: 44px;
+        width: 400px;
+        font-size: 14px;
+    }
+    .home-page-discount h1 {
+        margin-left: 60px;
+        text-align: left;
+    }
+
+    .nav-container {
+        padding-top: 50px;
+    }
+    
+    .by-nxtwave-text {
+        text-decoration: none;
+        color: white;
+        position: relative;
+        bottom: 40px;
+        margin-left: 130px; 
+
+    
+    }
+    .nav-container img {
+        height:150px;
+        width:300px;
+        margin-left: 60px;
+    }
+}
+
+
+/* Logo section */
+
+
+.logo-section-bg {
+    background-color: #0F172A;
+    padding: 30px;
+}
+
+.logo-section-bg h1 {
+    font-size: 36px;
+    white-space: wrap;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 50px;
+    font-family: satosi;
+}
+
+.logos {
+    white-space: nowrap;
+    margin: 40px 0;
+    overflow: hidden;
+}
+
+.logo-slide {
+    animation: logoSlide 30s infinite linear;
+    display: inline-block;
+}
+
+.logo-slide img {
+    height: 60px;
+    width: 90px;
+    margin: 0px 40px;
+    color: white;
+}
+
+@keyframes logoSlide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@media screen and (min-width:768px) {
+    .logo-section-bg h1 {
+        font-size: 46px;
+    }
+}
