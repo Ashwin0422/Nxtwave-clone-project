@@ -775,3 +775,244 @@
     color: #E2E8F0;
     margin-top: 4px;
 }
+
+/* Review Section */
+
+
+.review-section-container {
+    background-color: #0F172A;
+    padding: 30px 10px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.review-section-top-heading1 {
+    color: #F1F5F9;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    font-family: inherit;
+}
+
+.review-section-top-heading2-container {
+    display: flex;
+    justify-content: center;
+    height: 38px;
+    width: 300px;
+    padding: 8px 12px;
+    border: 1px solid #713F12;
+    background-color: #231F27;
+    margin: auto;
+    border-radius: 50px;
+}
+
+.review-section-top-heading2-container img {
+    height: 24px;
+    width: 24px;
+}
+
+.review-section-top-heading2 {
+    color: #F59E0B;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+
+
+
+.feedback-card {
+    background-color: #1E293B;
+    padding: 20px;
+    margin: 10px;
+    height: 180px;
+    width: 330px !important;
+    border-radius: 12px;
+    position: relative;
+}
+
+.feedback-student-img {
+    height: 40px;
+    width: 40px;
+    margin: 0px 10px 0px 0px;
+}
+
+.feedback-name {
+    font-size: 12px;
+    font-weight: 600;
+    color: #E2E8F0;
+    margin-bottom: 0px;
+    margin-top: 5px;
+}
+
+.feedback-desc {
+    color: #F1F5F7;
+    font-size: 10px;
+
+}
+
+.feedback-linkedin-logo {
+    height: 40px;
+    width: 40px;
+}
+
+.feedback-card-top-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.feedback-review {
+    color: #E2E8F0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.feedback-review span,a {
+    color: #54A3FA;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.feedback-review span,a:hover {
+    text-decoration: none;
+}
+
+.feedback-next {
+    position: absolute;
+    top: 360px;
+    right: 200px;
+}
+
+.feedback-prev {
+    position: absolute;
+    top: 360px;
+    left: 200px;
+}
+
+.feedback-pagination {
+    position: absolute;
+}
+
+#next2 {
+    color: white;
+    font-weight: 200;
+    background-color: transparent;
+    backdrop-filter: blur(2px);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+#prev2 {
+    color: white;
+    font-weight: 200;
+    background-color: transparent;
+    backdrop-filter: blur(2px);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.swiper-pagination-bullet {
+    background-color: white;
+    position: relative;
+    top: 15px;
+}
+
+ @media screen and (min-width:768px) {
+    .feedback-card {
+        height: 250px;
+        width: 530px !important;
+    }
+
+    .feedback-student-img {
+        height: 64px;
+        width: 64px;
+    }
+
+    .feedback-name {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .feedback-desc {
+        font-size: 16px;
+    }
+
+    .feedback-review {
+        font-size: 18px;
+        font-weight: 500;
+    }
+} 
+
+
+@media screen and (min-width:768px) {
+    .review-section-container {
+        padding-bottom: 70px;
+    }
+
+    .review-section-top-heading1 {
+        font-size: 30px;
+    }
+
+    .review-section-top-heading2-container {
+        height: 50px;
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .review-section-top-heading2 {
+        font-size: 24px;
+        margin-top: 5px;
+    }
+
+    .feedback-card {
+        height: 300px;
+        padding: 30px;
+    }
+
+    .feedback-name {
+        font-size: 22px;
+    }
+
+    .feedback-desc {
+        font-size: 18px;
+    }
+
+    .feedback-review {
+        font-size: 22px;
+    }
+
+    .feedback-student-img {
+        height: 70px;
+        width: 70px;
+    }
+}
+
+
+@media screen and (min-width:768px) {
+    .review-section-container {
+        padding-bottom: 100px;
+    }
+
+    .review-section-top-heading1 {
+        font-size: 46px;
+        font-weight: 500;
+    }
+
+    .review-section-top-heading2-container {
+        height: 50px;
+        width: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .review-section-top-heading2 {
+        font-size: 26px;
+        margin-top: 10px;
+    }
+}

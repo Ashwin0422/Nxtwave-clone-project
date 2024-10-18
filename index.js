@@ -170,3 +170,21 @@ function checkingSection3btnChecked() {
 
 checkingSection3btnChecked();
 
+
+// Review Section
+
+
+var swiper2 = new Swiper("#swiper2", {
+    grabCursor: true,
+    spaceBetween: 25,
+    loop: true,
+    centerslide: true,
+    fade: true,
+    pagination: {
+        el: "#pagination2",
+    },
+    navigation: {
+        nextEl: "#next2",
+        prevEl: "#prev2",
+    },
+});
