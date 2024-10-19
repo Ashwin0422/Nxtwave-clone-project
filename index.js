@@ -188,3 +188,35 @@ var swiper2 = new Swiper("#swiper2", {
         prevEl: "#prev2",
     },
 });
+
+
+
+// Get free potcast section
+
+let getOtpBtn = document.getElementById("getOtpBtn");
+let nameInput = document.getElementById("nameInput");
+let numberInput = document.getElementById("numberInput");
+let nameErrorMsg = document.getElementById("nameErrorMsg");
+let numberErrorMsg = document.getElementById("numberErrorMsg");
+
+
+getOtpBtn.onclick = function() {
+    if ( (nameInput.value === "") && (numberInput.value === "") ) {
+        nameErrorMsg.textContent = "*Required";
+        numberErrorMsg.textContent = "*Required";
+    }
+    else if (nameInput.value === "") {
+        nameErrorMsg.textContent = "*Required";
+    }
+    else  if (numberInput.value === "") {
+        numberErrorMsg.textContent = "*Required";
+    }
+    else if (isNaN(numberInput.value)) {
+        numberErrorMsg.textContent = "Enter Valid Numbers"   
+    }
+    else {
+        nameErrorMsg.textContent = "";
+        numberErrorMsg.textContent = "";
+    }
+    
+}
