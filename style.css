@@ -31,18 +31,14 @@
 .video-container video {
     width: 100vw;
     position: absolute;
-    top: 0;
+    top: -20px;
     left: 0;
     right: 0;
     z-index: -2;
     object-fit: cover;
 }
 
-/* .home-page-content-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-} */
+
 
 .content-heading-container {
     position: relative;
@@ -145,7 +141,7 @@
 
 .home-page-btn-container {
     margin-top: 40px;
-    cursor: pointer;
+    
 
 }
 
@@ -159,12 +155,16 @@
     font-size: 14px;
     border-radius: 12px;
     margin-inline: auto;
+    cursor: pointer;
+    
 }
+
 
 .home-page-btn-container .home-page-btn {
     border: 1px solid white;
     background-color: transparent;
     color: white;
+    cursor: pointer;
 
 }
 
@@ -504,6 +504,8 @@
 .card-wrapper {
     width: 100%;
     max-width: 100px;
+    
+
 }
 
 .card {
@@ -649,7 +651,7 @@
 .section3-bottom-btn {
     height: 44px;
     width: 100%;
-    max-width: 400px;
+    min-width: 500px; 
     font-size: 16px;
     text-align: center;
     margin-top: 30px;
@@ -1137,6 +1139,7 @@
 
 .podcast-input-section-container {
     margin: 20px;
+    
 }
 
 .podcast-input-section-container label {
@@ -1194,6 +1197,10 @@
 
 @media screen and (min-width:950px) {
     .podcast-section-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
         padding-top: 40px;
         padding-bottom: 40px;
     }
@@ -1207,6 +1214,84 @@
     
 }
 
+/* Otp */
+
+
+
+.otp-sec-content-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+}
+
+.otp-sec-header {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.otp-sec-para {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.otp-sec-input-heading {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.otp-sec-input-container  {
+    display: flex;
+    gap: 10px;
+}
+
+.otp-sec-input-container input {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    border-radius: 8px;
+    background-color: #334155;
+    border: none;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
+.otp-sec-input-container input::-webkit-inner-spin-button,
+.otp-sec-input-container input::-webkit-outer-spin-button{
+    -webkit-appearance:none;
+}
+
+.timer {
+    text-align: end;
+    color: #334155;
+}
+
+.otp-sec-verify-btn {
+    background-color: #CBD5E1;
+    color: #0F172A;
+    width: 400px;
+    padding: 10px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 12px;
+    margin: 10px 0px;
+}
+
+.active-verify-btn {
+    background-color: #2463EB;
+    color: white;
+}
+
+
+
+
+
 /* mini section */
 
 .mini-section-bg {
@@ -1218,6 +1303,7 @@
     font-size: 14px;
     text-align: center;
     color: white;
+
 }
 
 @media screen and (min-width:768px) {
@@ -1231,6 +1317,7 @@
 .footer-bg-container {
     background-color: #0F172A;
     padding: 20px;
+    
 }
 
 .nxtwave-logo {

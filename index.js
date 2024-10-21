@@ -199,6 +199,61 @@ let numberInput = document.getElementById("numberInput");
 let nameErrorMsg = document.getElementById("nameErrorMsg");
 let numberErrorMsg = document.getElementById("numberErrorMsg");
 
+let podcastSection = document.getElementById("podcastSection");
+let otpSection = document.getElementById("otpSection");
+let inputs = document.querySelectorAll(".otp-input");
+let otpVerifyBtn = document.getElementById("otpVerifyBtn");
+let timer = document.getElementById("timer");
+let customerNum = document.getElementById("customerNum");
+
+function triggerTimer() {
+    let seconds = 30;
+    let interval = setInterval(function() {
+        seconds -= 1;
+        timer.textContent = `${seconds} sec`;
+        if (seconds < 1) {
+            clearInterval(interval);
+        }
+    }, 1000);
+}
+
+function getOtpage() {
+    inputs[0].focus();
+
+    inputs.forEach((input, index) => {
+        input.addEventListener("keyup" , function(event) {
+            let currentInput = input;
+            let nextInput = input.nextElementSibling;
+            let prevInput = input.previousElementSibling;
+            
+            if (nextInput && nextInput.hasAttribute("disabled") && currentInput.value !== "") {
+                nextInput.removeAttribute("disabled", true);
+                nextInput.focus();
+            }
+            
+            if (event.key === "Backspace") {
+                inputs.forEach((input, index1) => {
+                    if (index <= index1 && prevInput) {
+                        input.setAttribute("disabled", true);
+                        prevInput.focus();
+                        prevInput.value = "";
+                    }
+                });
+            }
+            
+            if (!inputs[5].disabled && inputs[5].value !== "") {
+                console.log("last");
+                otpVerifyBtn.classList.add("active-verify-btn");
+                return;
+            }
+            otpVerifyBtn.classList.remove("active-verify-btn");
+            
+        });
+    });
+}
+
+
+
 
 getOtpBtn.onclick = function() {
     if ( (nameInput.value === "") && (numberInput.value === "") ) {
@@ -214,9 +269,29 @@ getOtpBtn.onclick = function() {
     else if (isNaN(numberInput.value)) {
         numberErrorMsg.textContent = "Enter Valid Numbers"   
     }
+    else if  (!((numberInput.value).length === 10)) {
+        numberErrorMsg.textContent = "Number Must be  10 Digits"
+    }
+
     else {
         nameErrorMsg.textContent = "";
         numberErrorMsg.textContent = "";
+        
+        
+        podcastSection.classList.add("d-none");
+        otpSection.classList.remove("d-none");
+        
+        customerNum.textContent = numberInput.value;
+
+        triggerTimer();
+        getOtpage()
+        
+
     }
     
 }
+
+
+
+
+
