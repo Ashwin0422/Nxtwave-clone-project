@@ -23,7 +23,7 @@ function displayingBgImg() {
 
 displayingBgImg();
 
-// Slider
+// Slider section 3 
 var swiper = new Swiper(".swiper-content", {
     slidesPerView: 3,
     spaceBetween: 25,
@@ -98,7 +98,10 @@ let previousCheckedBtn = all;
 function checkingSection3btnChecked() {
     
     all.addEventListener("click", function() {
+        all.classList.add("section3-card-btn-checked");
+        previousCheckedBtn.classList.remove("section3-card-btn-checked");
         addingCards(section3Cards);
+        previousCheckedBtn = all;
     });
 
     trending.addEventListener("click", function() {
